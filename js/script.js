@@ -5,7 +5,7 @@ hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
   hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
+  navMenu.classList.toggle("active");190028
 }
 
 // Close navbar when link is clicked
