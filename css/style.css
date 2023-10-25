@@ -122,6 +122,25 @@ body {
   background: var(--bg-primary);
 }
 
+.nav-menu a:not(.btn) {
+  background-image: linear-gradient(
+    to right,
+    #9667e0,
+    #9667e0 50%,
+    var( --text-color-three) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+  background-position: 0;
+ }
+
+
 .navbar .nav-link {
   margin: 0 1rem;
   font-size: 0.9rem;
@@ -382,9 +401,10 @@ h3 {
   margin: 0.9rem 0;
 }
 
-#footer .social img {
-  width: 20px;
-  height: 20px;
+#footer .social i {
+  width: 15px;
+  height: 15px;
+  color: var(--primary-color);
   transition: transform 1s ease-in-out;
 }
 
@@ -395,13 +415,14 @@ h3 {
 #footer p {
   font-size: 0.8rem;
 }
-.socials img{
-  width: 30px;
-  height: 30px;
+.socials i{
+  width: 15px;
+  height: 15px;
+  color: var(--text-color-three);
   transition: transform 0.7s ease-in-out;
 }
 
-.socials img:hover , .social img:hover{
+.socials i:hover , .social i:hover{
   transform: rotate(360deg);
 }
 /* Responsiveness */
@@ -489,3 +510,5 @@ h3 {
     width: 80%;
   }
 }
+
+
