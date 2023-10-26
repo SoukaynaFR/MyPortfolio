@@ -69,9 +69,6 @@ myDate.innerHTML = yes;
 
 
 
-
-
-
 // Retrieve the "See More" button and the hidden projects
 const seeMoreBtn = document.getElementById('seeMoreBtn');
 const hiddenProjects = document.getElementById('hiddenProjects');
@@ -81,6 +78,7 @@ seeMoreBtn.addEventListener('click', function() {
   // Toggle the display of the hidden projects
   if (hiddenProjects.style.display === 'none') {
     hiddenProjects.style.display = 'grid';
-    seeMoreBtn.style.display = 'none'; // Hide the "See More" button after revealing the additional projects
+    seeMoreBtn.style.display = 'none'; 
   }
 });
+
