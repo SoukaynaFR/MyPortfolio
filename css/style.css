@@ -998,7 +998,7 @@ ol {
   }
 }
 
-@media (max-width: 670px){
+/* @media (max-width: 670px){
   .profile-image-container {
     width: 240px; 
     height: 240px; 
@@ -1017,9 +1017,9 @@ ol {
     margin-top: 1rem;
     font-size: 14px;
   }
-}
+} */
 
-@media (max-width: 600px) {
+@media (max-width: 670px) {
   .navbar .nav-menu {
     position: fixed;
     right: -100vw;
