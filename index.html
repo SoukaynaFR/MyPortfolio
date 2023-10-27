@@ -68,7 +68,7 @@
           <h1> <span>
               < </span>Hello, it's me <span>/></span></h1>
 
-          <h2>Soukayna El Ferchouni</h2>
+          <h2 class="myname">Soukayna El Ferchouni</h2>
 
           <p>
             <span> > </span> <span id="element"></span>
@@ -144,7 +144,7 @@
 
 
     </div>
-
+<BR></BR>
     <div class="aboutItem">
       <h3> <span> > </span> CERTIFICATES</h3>
       <br>
@@ -315,6 +315,7 @@
 
         </div>
       </div>
+      <br><br>
       <div class="skillsItem">
         <h3>Languages I speak</h3>
         <br>
@@ -660,7 +661,9 @@
             <img src="./assets/spotify.png" alt="GitHub" />
           </a>
         </div>
+        <br>
       </div>
+      
       <div class="contactItem">
         <h3>Message Me</h3>
         <div class="messageMe">
@@ -710,6 +713,15 @@
 
     });
   </script>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+  
 </body>
 
 </html>
