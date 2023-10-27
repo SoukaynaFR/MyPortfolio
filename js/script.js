@@ -82,3 +82,39 @@ seeMoreBtn.addEventListener('click', function() {
   }
 });
 
+// sending mails
+
+function sendMail() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (name && email && message) {
+    if (email.match(emailRegex)) {
+      var params = {
+        name: name,
+        email: email,
+        message: message,
+      };
+      const serviceID = "service_inen6ca";
+      const templateID = "template_ffgcir8";
+
+      emailjs
+        .send(serviceID, templateID, params)
+        .then((res) => {
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+          console.log(res);
+          alert("Thanks for your message ✨😊! I will get back to you soon!");
+        })
+        .catch((err) => console.log(err));
+    } else {
+      alert("✔ Please use a valid email address,so I can reply back ");
+    }
+  } else {
+    alert("Please fill in all the required fields.");
+  }
+}
+

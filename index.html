@@ -8,11 +8,19 @@
   <title>SoukaynaFR</title>
 
   <link rel="icon" type="image/x-icon" href="" />
-  <link rel="manifest" href="assets/favicon/site.webmanifest" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/utilities.css" />
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("OzcGtJcOrLg9ncZ3T");
+   })();
+</script>
+
 </head>
 
 <body>
@@ -656,14 +664,13 @@
       <div class="contactItem">
         <h3>Message Me</h3>
         <div class="messageMe">
-          <form action="">
-            <input type="text" name="Name" id="" placeholder="Name">
-            <input type="text" name="email" id="" placeholder="E-mail Adress">
-            <textarea name="Message" id="" placeholder="Message" cols="30" rows="10"></textarea>
-            <button>Send Message</button>
-
-
-          </form>
+          <div class="form">
+            <input type="text" id="name" placeholder="Name" autocomplete required>
+            <input type="email" id="email" placeholder="E-mail Address" autocomplete required>
+            <textarea name="message" id="message" placeholder="Message" cols="30" rows="10" required></textarea>
+            <button onclick="sendMail()">Send Message</button>
+          </div>
+          
         </div>
       </div>
 
