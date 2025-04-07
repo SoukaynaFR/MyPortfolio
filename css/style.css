@@ -350,7 +350,6 @@ textarea {
   border: none;
   border-radius: 5px;
   background-color: var(--bg-primary);
-  color: var(--text-color);
   outline: none;
 }
 input[type="text"]:hover,input[type="email"]:hover,
